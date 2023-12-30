@@ -864,3 +864,4 @@ shape = SubResource("RectangleShape2D_7dhu0")
 disabled = true
 
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

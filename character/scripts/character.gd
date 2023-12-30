@@ -66,5 +66,6 @@ func _on_attack_timer_timeout() -> void:
 	_is_attacking = false
 
 
-func _on_attack_area_body_entered(body):
-	pass # Replace with function body.
+func _on_attack_area_body_entered(_body) -> void:
+	if _body.is_in_group("enemy"):
+		_body.update_health(randi_range(1, 5))
